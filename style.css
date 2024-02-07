@@ -1,0 +1,80 @@
+/* --------------- Font --------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #311C4A;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    max-width: 55vw;
+    clip-path: inset(0 0 1px);
+    max-height: 20vh;
+}
+
+main {
+    background-color: white;
+    margin: auto;
+    max-width: 824px;
+    width: 75vw;
+    border-radius: 16px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.participante {
+    width: 200px;
+    text-align: center;
+    padding: 16px;
+}
+
+.nome {
+    font-weight: bold;
+}
+
+#select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+
+button {
+    background-color: rgb(158, 84, 228);
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 6px;
+    width: fit-content;
+    font-size: large;
+    margin: 16px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-logo {
+    max-width: 50vw;
+    max-height: 22vh;
+}
