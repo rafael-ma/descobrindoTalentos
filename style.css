@@ -26,8 +26,8 @@ header {
 
 #logo {
     max-width: 55vw;
+    max-height: 25vh;
     clip-path: inset(0 0 1px);
-    max-height: 20vh;
 }
 
 main {
