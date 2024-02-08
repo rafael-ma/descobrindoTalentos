@@ -69,6 +69,10 @@ participantes.map((element, index) => {
     createName.innerText = element.nome
     createParticipant.appendChild(createName)
 
+    const createCity = document.createElement('small')
+    createCity.innerText = element.cidade
+    createParticipant.appendChild(createCity)    
+
 })
 
 function flexAdjust() {

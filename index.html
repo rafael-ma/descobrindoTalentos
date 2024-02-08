@@ -13,12 +13,28 @@
     
     <main>
         <form>
-            <section id="select">
+            <section id="select" class="select">
             </section>
-
-            <button id="nextButton">Seguinte</button>
+            <button id="nextButton" class="select">Seguinte</button>
 
             <section id="inputData">
+                <fieldset id="name">
+                    <legend class="emphasis">Nome</legend>
+                    <div class="input">
+                        <input type="text" name="name" id="nameInput">
+                        <label for="nameInput" class="label">Nome</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="lastName" id="lastNameInput">
+                        <label for="lastNameInput" class="label">Sobrenome</label>
+                    </div>
+                </fieldset>
+
+                <fieldset for="emailInput">
+                    <legend><label for="emailInput" class="emphasis">Email</label></legend>
+                    <input type="email" name="email" id="emailInput">
+                    <label for="emailInput">exemplo@email.com</label>
+                </fieldset>
             </section>
             
             <button id="submitButton" type="submit">Enviar</button>
