@@ -83,8 +83,8 @@ participantes.map((element, index) => {
 })
 
 function flexAdjust() {
-    if ((participantes.length%3 == 1) && (screen.width > 1000)) {
-        selectSection.lastElementChild.style.marginRight = '530px'
+    if ((participantes.length%3 == 1) && (screen.width > 970)) {
+        selectSection.lastElementChild.style.marginRight = '465px'
     } else {
         selectSection.lastElementChild.style.marginRight = '0'
     }

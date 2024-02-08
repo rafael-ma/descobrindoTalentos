@@ -1,6 +1,10 @@
 /* --------------- Font --------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+html {
+    width: 100vw;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +14,9 @@
 
 body {
     background-color: #311C4A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -25,7 +32,6 @@ header {
 
 main {
     background-color: white;
-    margin: auto;
     max-width: 824px;
     width: 75vw;
     border-radius: 16px;
@@ -75,6 +81,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     padding: 32px;
 }
 
@@ -165,3 +172,7 @@ footer {
     max-width: 50vw;
     max-height: 22vh;
 }
+
+/* @media (min-width:){
+    
+} */
