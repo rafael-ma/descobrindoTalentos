@@ -73,6 +73,13 @@ participantes.map((element, index) => {
     createCity.innerText = element.cidade
     createParticipant.appendChild(createCity)    
 
+    createParticipant.addEventListener('click',() => {
+        const isSelected = document.querySelector('.selected')
+        if (isSelected != null) {
+            isSelected.classList.toggle('selected')
+        }
+        createParticipant.classList.toggle('selected')
+    })
 })
 
 function flexAdjust() {
@@ -82,3 +89,4 @@ function flexAdjust() {
         selectSection.lastElementChild.style.marginRight = '0'
     }
 }
+
