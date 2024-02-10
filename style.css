@@ -40,6 +40,10 @@ main {
     justify-content: center;
 }
 
+.participante .image {
+    position: relative;
+}
+
 .participante {
     outline: 2px solid white;
     width: 200px;
@@ -72,8 +76,19 @@ main {
     gap: 32px;
 }
 
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9e54e4;
+    font-size: 100px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: zoomOut .2s;
+}
+
 .select {
-    /* display: none !important; */
+    display: block;
 }
 
 form {
@@ -85,7 +100,8 @@ form {
     padding: 32px;
 }
 
-#inputData {
+.inputData {
+    display: none;
     width: 80%;
 }
 
@@ -171,6 +187,16 @@ footer {
 #footer-logo {
     max-width: 50vw;
     max-height: 22vh;
+}
+
+/* Animations */
+@keyframes zoomOut {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 100px;
+    }
 }
 
 /* @media (min-width:){

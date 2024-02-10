@@ -60,9 +60,18 @@ participantes.map((element, index) => {
     createParticipant.setAttribute('class','participante')
     selectSection.appendChild(createParticipant)
 
+    const createImageDiv = document.createElement('div')
+    createImageDiv.setAttribute('class','image')
+    createParticipant.appendChild(createImageDiv)
+
     const createImage = document.createElement('img')
     createImage.setAttribute('src', element.foto)
-    createParticipant.appendChild(createImage)
+    createImageDiv.appendChild(createImage)
+    
+    const checkIcon = document.createElement('i')
+    checkIcon.setAttribute('class','fa-solid fa-check')
+    checkIcon.style.display = 'none'
+    createImageDiv.appendChild(checkIcon)
 
     const createName = document.createElement('p')
     createName.setAttribute('class','nome')
@@ -71,15 +80,19 @@ participantes.map((element, index) => {
 
     const createCity = document.createElement('small')
     createCity.innerText = element.cidade
-    createParticipant.appendChild(createCity)    
-
+    createParticipant.appendChild(createCity)
+    
     createParticipant.addEventListener('click',() => {
         const isSelected = document.querySelector('.selected')
         if (isSelected != null) {
             isSelected.classList.toggle('selected')
+            isSelected.firstElementChild.children[1].style.display = 'none'
         }
         createParticipant.classList.toggle('selected')
-    })
+        createParticipant.firstElementChild.children[1].style.display = 'block'
+    }
+
+    )
 })
 
 function flexAdjust() {
