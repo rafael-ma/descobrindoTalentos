@@ -39,7 +39,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 32px;
+    padding: 16px;
 }
 
 .participante .image {
@@ -96,7 +96,7 @@ form {
     flex-direction: column;
     align-items: center;
 
-    padding: 32px;
+    padding: 12px;
 }
 
 .inputData {
@@ -116,7 +116,7 @@ legend {
 #name {
     display: flex;
     gap: 24px;
-
+    flex-direction: column;
 }
 
 label {
@@ -131,7 +131,7 @@ label {
 
 input {
     width: 100%;
-    padding: 10px 16px;
+    padding: 10px 10px;
     border: none;
     outline: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -156,7 +156,7 @@ button {
     font-weight: bold;
     padding: 10px 14px;
     border-radius: 6px;
-    width: fit-content;
+    width: 180px;
     font-size: large;
     margin: 16px;
     box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.1), inset 3px 3px 5px rgba(255, 255, 255, 0.2), 0 0 8px rgba(0, 0, 0, 0.5);
@@ -192,8 +192,16 @@ footer {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 900px) {
     #name {
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    main {
+        padding: 32px;
+    }
+
+    form {
+        padding: 32px;
     }
 }
