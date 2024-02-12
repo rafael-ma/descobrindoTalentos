@@ -86,14 +86,19 @@ participantes.map((element, index) => {
         const isSelected = document.querySelector('.selected')
         if (isSelected != null) {
             isSelected.classList.toggle('selected')
-            isSelected.firstElementChild.children[1].style.display = 'none'
+            isSelected.firstElementChild.lastElementChild.style.display = 'none'
         }
         createParticipant.classList.toggle('selected')
-        createParticipant.firstElementChild.children[1].style.display = 'block'
+        createParticipant.firstElementChild.lastElementChild.style.display = 'block'
     }
 
     )
 })
+
+function nextButton() {
+    const selectedParticipant = document.querySelector('.selected')
+    console.log(selectedParticipant)
+}
 
 function flexAdjust() {
     if ((participantes.length%3 == 1) && (screen.width > 970)) {

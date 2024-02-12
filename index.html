@@ -12,12 +12,12 @@
     </header>
     
     <main>
-        <form>
-            <section id="select" class="select">
-            </section>
-            <button id="nextButton" class="select">Seguinte</button>
+        <section id="select" class="select">
+        </section>
+        <button onclick="nextButton()" id="nextButton" class="select">Seguinte</button>
 
-            <section class="inputData">
+        <section class="inputData">
+            <form method="post">
                 <fieldset id="name">
                     <legend class="emphasis">Nome</legend>
                     <div class="input">
@@ -35,10 +35,10 @@
                     <input type="email" name="email" id="emailInput">
                     <label for="emailInput">exemplo@email.com</label>
                 </fieldset>
-            </section>
-            
-            <button id="submitButton" class="inputData" type="submit">Enviar</button>
-        </form>
+                <button id="submitButton" class="inputData" type="submit">Enviar</button>
+                
+            </form>
+        </section>
     </main>
 
     <footer>
