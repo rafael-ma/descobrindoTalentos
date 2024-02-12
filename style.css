@@ -54,11 +54,6 @@ main {
     cursor: pointer;
 }
 
-.participante:hover {
-    outline: 2px solid #9e54e4;
-    transition: all .5s ease;
-}
-
 .selected {
     transition: .1s ease;
     box-shadow: 0 0 3px 4px #9e54e4;
@@ -162,16 +157,6 @@ button {
     box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.1), inset 3px 3px 5px rgba(255, 255, 255, 0.2), 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
-button:hover {
-    transform: scale(1.1);
-    box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.2), inset 3px 3px 5px rgba(255, 255, 255, 0.3), 2px 5px 15px rgba(0, 0, 0, 0.3);
-    transition: .3s ease;
-}
-
-button:not(:hover) {
-    transition: .3s ease;
-}
-
 footer {
     display: flex;
     justify-content: center;
@@ -182,16 +167,7 @@ footer {
     max-height: 22vh;
 }
 
-/* Animations */
-@keyframes zoomOut {
-    from {
-        font-size: 0;
-    }
-    to {
-        font-size: 100px;
-    }
-}
-
+/* Responsividade para desktop */
 @media screen and (min-width: 900px) {
     #name {
         flex-direction: row;
@@ -203,5 +179,32 @@ footer {
 
     form {
         padding: 32px;
+    }
+
+
+
+    /* Animations */
+    @keyframes zoomOut {
+        from {
+            font-size: 0;
+        }
+        to {
+            font-size: 100px;
+        }
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.2), inset 3px 3px 5px rgba(255, 255, 255, 0.3), 2px 5px 15px rgba(0, 0, 0, 0.3);
+        transition: .3s ease;
+    }
+    
+    button:not(:hover) {
+        transition: .3s ease;
+    }
+
+    .participante:hover {
+        outline: 2px solid #9e54e4;
+        transition: all .5s ease;
     }
 }
