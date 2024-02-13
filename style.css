@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 html {
-    width: 100vw;
+    width: 100%;
 }
 
 * {
@@ -81,10 +81,6 @@ i {
     animation: zoomOut .2s;
 }
 
-.select {
-    display: block;
-}
-
 form {
     width: 100%;
     display: flex;
@@ -94,8 +90,8 @@ form {
     padding: 12px;
 }
 
-.inputData {
-    /* display: none; */
+#inputData {
+    display: none;
 }
 
 fieldset {

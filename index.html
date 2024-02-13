@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Descobrindo Talentos</title>
 </head>
@@ -16,26 +17,27 @@
         </section>
         <button onclick="nextButton()" id="nextButton" class="select">Seguinte</button>
 
-        <section class="inputData">
-            <form action="#" method="post">
+        <section id="inputData">
+            <form method="post">
                 <fieldset id="name">
-                    <legend class="emphasis">Nome</legend>
+                    <legend><label class="emphasis" for="nameInput">Nome</label></legend>
                     <div class="input">
                         <input type="text" name="name" id="nameInput">
                         <label for="nameInput" class="label">Nome</label>
-                    </div>
-                    <div class="input">
+                    </div>                    <div class="input">
                         <input type="text" name="lastName" id="lastNameInput">
                         <label for="lastNameInput" class="label">Sobrenome</label>
                     </div>
                 </fieldset>
 
                 <fieldset for="emailInput">
-                    <legend><label for="emailInput" class="emphasis">Email</label></legend>
+                    <legend>
+                        <label for="emailInput" class="emphasis">Email</label>
+                    </legend>
                     <input type="email" name="email" id="emailInput">
                     <label for="emailInput">exemplo@email.com</label>
                 </fieldset>
-                <button id="submitButton" class="inputData" type="submit">Enviar</button>
+                <button id="submitButton" type="submit">Enviar</button>
                 
             </form>
         </section>
@@ -47,5 +49,6 @@
 
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/236858bdbb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
