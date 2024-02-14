@@ -52,6 +52,7 @@ const participantes = [
     
 ]
 const selectSection = document.querySelector('#select')
+var selectedParticipant
 
 /* Generation functions to each participant */
 
@@ -114,7 +115,7 @@ function flexAdjust() {
 /* Validation to next button */
 
 function nextButton() {
-    const selectedParticipant = document.querySelector('.selected')
+    selectedParticipant = document.querySelector('.selected')
     if (selectedParticipant == null) {
         Swal.fire({
             icon: "error",
@@ -172,5 +173,30 @@ form.addEventListener('submit', (event) => {
         Swal.fire('Por favor, preencha com um email válido.')
         emailInput.focus()
         return
-    } 
+    } else {
+        fetch('https://api.sheetmonkey.io/form/qGiDBZqRF5NuWyaqw2T4VD', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                nome: `${nameInput.value} ${lastNameInput.value}`, 
+                email: emailInput.value, 
+                participante: selectedParticipant.children[1].innerText, 
+                cidade: selectedParticipant.lastElementChild.innerText
+            })
+        })
+
+    }
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Voto confirmado",
+        showConfirmButton: false,
+        timer: 3000
+    })
+    setTimeout(function() {
+        location.reload()
+    }, 3000)
 })
